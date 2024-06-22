@@ -20,6 +20,10 @@ export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
           width: "72px",
           borderRadius: "15%",
           backgroundColor: colors.secondary,
+          ":hover": {
+            backgroundColor: colors.tertiary,
+            color: colors.secondary,
+          },
           display: "flex",
           justifyContent: "center",
           alignItems: "center",
@@ -29,13 +33,7 @@ export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
       >
         <Icon fontSize="inherit" />
       </Box>
-      <Typography
-        component={Link}
-        href={link}
-        sx={{ mt: 1, color: colors.secondary }}
-      >
-        {title}
-      </Typography>
+      <Typography sx={{ mt: 1, color: colors.secondary }}>{title}</Typography>
     </Box>
   );
 };
