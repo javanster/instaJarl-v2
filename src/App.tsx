@@ -1,5 +1,6 @@
 import { Box } from "@mui/material";
 import { colors } from "./utils/colors";
+import { LinkGrid } from "./components/LinkGrid";
 
 function App() {
   return (
@@ -9,7 +10,9 @@ function App() {
         width: "100%",
         backgroundColor: colors.primary,
       }}
-    ></Box>
+    >
+      <LinkGrid />
+    </Box>
   );
 }
 
