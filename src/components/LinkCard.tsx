@@ -33,7 +33,7 @@ export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
       >
         <Icon fontSize="inherit" />
       </Box>
-      <Typography sx={{ mt: 1, color: colors.secondary }}>{title}</Typography>
+      <Typography sx={{ mt: 1, color: colors.tertiary }}>{title}</Typography>
     </Box>
   );
 };
