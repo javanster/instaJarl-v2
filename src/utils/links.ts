@@ -1,3 +1,4 @@
+import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import BallotIcon from "@mui/icons-material/Ballot";
@@ -7,9 +8,10 @@ import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import SchoolIcon from "@mui/icons-material/School";
+import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import YouTubeIcon from "@mui/icons-material/YouTube";
-import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
+import { SvgIconTypeMap } from "@mui/material";
 
 export interface LinkObj {
   title: string;
@@ -77,6 +79,18 @@ export const links: LinkObj[] = [
     title: "ResearchGate",
     link: "https://www.researchgate.net",
     icon: BiotechIcon,
+    activeDuringWorkHours: true,
+  },
+  {
+    title: "Sparebank 1 SMN",
+    link: "https://www.sparebank1.no/nb/smn/privat.html",
+    icon: AccountBalanceIcon,
+    activeDuringWorkHours: true,
+  },
+  {
+    title: "Giving What We Can",
+    link: "https://www.givingwhatwecan.org",
+    icon: VolunteerActivismIcon,
     activeDuringWorkHours: true,
   },
 ];
