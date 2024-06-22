@@ -11,14 +11,14 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import { SvgIconTypeMap } from "@mui/material";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 
-export interface LinkType {
+export interface LinkObj {
   title: string;
   link: string;
   icon: OverridableComponent<SvgIconTypeMap<object, "svg">>;
   activeDuringWorkHours: boolean;
 }
 
-export const links: LinkType[] = [
+export const links: LinkObj[] = [
   {
     title: "Proton Mail",
     link: "https://mail.proton.me/",

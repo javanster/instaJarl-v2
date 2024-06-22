@@ -1,8 +1,8 @@
 import { Box, Link, Typography } from "@mui/material";
-import { LinkType } from "../utils/links";
+import { LinkObj } from "../utils/links";
 import { colors } from "../utils/colors";
 
-export const LinkCard = ({ title, link, icon: Icon }: LinkType) => {
+export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
   return (
     <Box
       sx={{
