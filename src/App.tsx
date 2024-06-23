@@ -9,6 +9,7 @@ function App() {
         height: "100vh",
         width: "100%",
         backgroundColor: colors.primary,
+        overflowY: "auto",
       }}
     >
       <LinkGrid />
