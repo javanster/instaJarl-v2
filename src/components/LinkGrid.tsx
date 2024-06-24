@@ -14,7 +14,7 @@ export const LinkGrid = () => {
         display: "flex",
         width: "100%",
         justifyContent: "center",
-        mt: "100px",
+        my: 12,
       }}
     >
       <Grid

@@ -39,7 +39,7 @@ export const SearchBar = () => {
   };
 
   return (
-    <Box sx={{ display: "flex", justifyContent: "center", mt: "128px" }}>
+    <Box sx={{ display: "flex", justifyContent: "center", mt: 6 }}>
       <TextField
         autoFocus
         label="Search"
