@@ -2,6 +2,7 @@ import { Box } from "@mui/material";
 import { colors } from "./utils/colors";
 import { LinkGrid } from "./components/LinkGrid";
 import { SearchBar } from "./components/SearchBar";
+import { DigitalClock } from "./components/DigitalClock";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         overflowY: "auto",
       }}
     >
+      <DigitalClock />
       <SearchBar />
       <LinkGrid />
     </Box>
