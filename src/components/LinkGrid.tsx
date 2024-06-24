@@ -28,7 +28,7 @@ export const LinkGrid = () => {
         {links.map(
           (l) =>
             showLink(l) && (
-              <Grid item xs={3} sm={2} lg={1}>
+              <Grid key={l.title} item xs={3} sm={2} lg={1}>
                 <LinkCard
                   title={l.title}
                   link={l.link}
