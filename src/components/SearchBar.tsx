@@ -83,11 +83,11 @@ export const SearchBar = () => {
             borderRadius: "0px 4px 4px 0px",
           },
           "& .MuiOutlinedInput-notchedOutline": {
-            borderWidth: "0px 0px 1px 0px",
             borderRadius: "0px 4px 4px 0px",
             borderColor: colors.secondary,
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
+            borderWidth: "0px 0px 2px 0px",
             borderColor: colors.tertiary,
           },
         }}
