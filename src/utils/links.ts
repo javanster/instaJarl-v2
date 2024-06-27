@@ -1,14 +1,14 @@
-import AccountBalanceIcon from "@mui/icons-material/AccountBalance";
 import AccountCircleIcon from "@mui/icons-material/AccountCircle";
+import AirIcon from "@mui/icons-material/Air";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import BallotIcon from "@mui/icons-material/Ballot";
 import BiotechIcon from "@mui/icons-material/Biotech";
 import ChatIcon from "@mui/icons-material/Chat";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
+import GTranslateIcon from "@mui/icons-material/GTranslate";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
 import SchoolIcon from "@mui/icons-material/School";
-import VolunteerActivismIcon from "@mui/icons-material/VolunteerActivism";
 import YouTubeIcon from "@mui/icons-material/YouTube";
 import { OverridableComponent } from "@mui/material/OverridableComponent";
 import { SvgIconTypeMap } from "@mui/material";
@@ -81,16 +81,17 @@ export const links: LinkObj[] = [
     icon: BiotechIcon,
     activeDuringWorkHours: true,
   },
+
   {
-    title: "Sparebank 1 SMN",
-    link: "https://www.sparebank1.no/nb/smn/privat.html",
-    icon: AccountBalanceIcon,
+    title: "Yr",
+    link: "https://www.yr.no",
+    icon: AirIcon,
     activeDuringWorkHours: true,
   },
   {
-    title: "Giving What We Can",
-    link: "https://www.givingwhatwecan.org",
-    icon: VolunteerActivismIcon,
+    title: "Google Translate",
+    link: "https://translate.google.no/",
+    icon: GTranslateIcon,
     activeDuringWorkHours: true,
   },
 ];
