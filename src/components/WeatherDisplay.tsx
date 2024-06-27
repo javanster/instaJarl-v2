@@ -28,7 +28,7 @@ export const WeatherDisplay = ({ position }: Props) => {
             alignItems: "center",
           }}
         >
-          <img width={50} src={`public/weatherSvg/${weatherSymbolCode}.svg`} />
+          <img width={50} src={`/weatherSvg/${weatherSymbolCode}.svg`} />
           <Typography
             sx={{ fontWeight: 1, color: colors.tertiary, ml: 1 }}
             fontSize={{
