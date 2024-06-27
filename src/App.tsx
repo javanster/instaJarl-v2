@@ -4,6 +4,7 @@ import { LinkGrid } from "./components/LinkGrid";
 import { SearchBar } from "./components/SearchBar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TopWidget } from "./components/TopWidget";
+import { Footer } from "./components/Footer";
 
 function App() {
   const queryClient = new QueryClient();
@@ -13,8 +14,8 @@ function App() {
       sx={{
         height: "100vh",
         width: "100%",
-        backgroundColor: colors.primary,
         overflowY: "auto",
+        backgroundColor: colors.primary,
       }}
     >
       <QueryClientProvider client={queryClient}>
@@ -22,6 +23,7 @@ function App() {
         <SearchBar />
         <LinkGrid />
       </QueryClientProvider>
+      <Footer />
     </Box>
   );
 }
