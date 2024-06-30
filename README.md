@@ -4,7 +4,7 @@ InstaJarl is a personal web application containing bookmarks and minor utilities
 
 ![A screenshot of the web application](/public/exampleImage.png)
 
-### How to run
+### How to run locally
 
 1. Clone the repo by using this link:
 
