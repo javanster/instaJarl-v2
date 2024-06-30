@@ -1,5 +1,8 @@
 import { Box, Typography } from "@mui/material";
-import { chosenColorState } from "../utils/state";
+import {
+  agreedToWeatherFunctionalityState,
+  chosenColorState,
+} from "../utils/state";
 import { TimeDisplay } from "./TimeDisplay";
 import { DateDisplay } from "./DateDisplay";
 import { WeatherDisplay } from "./WeatherDisplay";
@@ -10,6 +13,9 @@ import { useAtomValue } from "jotai";
 export const TopWidget = () => {
   const chosenColor = useAtomValue(chosenColorState);
   const [position, setPosition] = useState<Position | null>(null);
+  const agreedToWeatherFunctionality = useAtomValue(
+    agreedToWeatherFunctionalityState
+  );
 
   useEffect(() => {
     navigator.geolocation.getCurrentPosition((position) => {
@@ -23,7 +29,10 @@ export const TopWidget = () => {
       sx={{
         display: "flex",
         justifyContent: "center",
-        flexDirection: { xs: position ? "column" : "row", md: "row" },
+        flexDirection: {
+          xs: position && agreedToWeatherFunctionality ? "column" : "row",
+          md: "row",
+        },
         mt: {
           xs: 6,
           md: 12,
@@ -43,7 +52,11 @@ export const TopWidget = () => {
             mx: 2,
             fontWeight: 1,
             color: chosenColor.secondary,
-            visibility: { xs: position ? "hidden" : "visible", md: "visible" },
+            visibility: {
+              xs:
+                position && agreedToWeatherFunctionality ? "hidden" : "visible",
+              md: "visible",
+            },
             fontSize: {
               xs: 54,
               md: 72,
@@ -61,7 +74,7 @@ export const TopWidget = () => {
         }}
       >
         <DateDisplay />
-        {position && (
+        {position && agreedToWeatherFunctionality && (
           <Typography
             sx={{ mx: 2, fontWeight: 1, color: chosenColor.secondary }}
             fontSize={{
@@ -72,7 +85,9 @@ export const TopWidget = () => {
             {"/"}
           </Typography>
         )}
-        {position && <WeatherDisplay position={position} />}
+        {position && agreedToWeatherFunctionality && (
+          <WeatherDisplay position={position} />
+        )}
       </Box>
     </Box>
   );
