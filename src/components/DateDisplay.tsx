@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { chosenColorState } from "../utils/colors";
 import { useAtomValue } from "jotai";
+import { chosenColorState } from "../utils/state";
 
 export const DateDisplay = () => {
   const chosenColor = useAtomValue(chosenColorState);

@@ -8,7 +8,7 @@ import {
 import { useState } from "react";
 import { searchBaseUrls } from "../utils/searchUrls";
 import SearchIcon from "@mui/icons-material/Search";
-import { chosenColorState } from "../utils/colors";
+import { chosenColorState } from "../utils/state";
 import { useAtomValue } from "jotai";
 
 export const SearchBar = () => {

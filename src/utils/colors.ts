@@ -1,5 +1,3 @@
-import { atom } from "jotai";
-
 export const colorPalettes = [
   {
     primary: "#115E59",
@@ -32,5 +30,3 @@ export const colorPalettes = [
     quaternary: "#115E59",
   },
 ];
-
-export const chosenColorState = atom(colorPalettes[0]);

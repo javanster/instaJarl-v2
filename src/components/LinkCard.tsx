@@ -1,7 +1,7 @@
 import { Box, Link, Typography } from "@mui/material";
 import { LinkObj } from "../utils/links";
-import { chosenColorState } from "../utils/colors";
 import { useAtomValue } from "jotai";
+import { chosenColorState } from "../utils/state";
 
 export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
   const chosenColor = useAtomValue(chosenColorState);

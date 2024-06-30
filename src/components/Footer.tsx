@@ -1,6 +1,6 @@
 import { Box, Link, Typography } from "@mui/material";
-import { chosenColorState } from "../utils/colors";
 import { useAtomValue } from "jotai";
+import { chosenColorState } from "../utils/state";
 
 export const Footer = () => {
   const chosenColor = useAtomValue(chosenColorState);

@@ -1,6 +1,6 @@
 import { Typography } from "@mui/material";
 import { useState, useEffect } from "react";
-import { chosenColorState } from "../utils/colors";
+import { chosenColorState } from "../utils/state";
 import { useAtomValue } from "jotai";
 
 export const TimeDisplay = () => {

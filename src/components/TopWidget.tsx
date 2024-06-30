@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import { chosenColorState } from "../utils/colors";
+import { chosenColorState } from "../utils/state";
 import { TimeDisplay } from "./TimeDisplay";
 import { DateDisplay } from "./DateDisplay";
 import { WeatherDisplay } from "./WeatherDisplay";

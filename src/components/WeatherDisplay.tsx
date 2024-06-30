@@ -1,7 +1,7 @@
 import { Box, CircularProgress, Typography } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { Position, fetchCurrentWeather } from "../api/weather";
-import { chosenColorState } from "../utils/colors";
+import { chosenColorState } from "../utils/state";
 import { useAtomValue } from "jotai";
 
 interface Props {
