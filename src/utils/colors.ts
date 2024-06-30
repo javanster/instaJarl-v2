@@ -1,5 +1,36 @@
-export const colors = {
-  primary: "#1E293B",
-  secondary: "#115E59",
-  tertiary: "#CBD5E1",
-};
+import { atom } from "jotai";
+
+export const colorPalettes = [
+  {
+    primary: "#115E59",
+    secondary: "#FAF0E5",
+    tertiary: "#92CCC9",
+    quaternary: "#454545",
+  },
+  {
+    primary: "#475640",
+    secondary: "#FAF0E5",
+    tertiary: "#DCAC64",
+    quaternary: "#33271E",
+  },
+  {
+    primary: "#B6A798",
+    secondary: "#FAF0E5",
+    tertiary: "#5B2617",
+    quaternary: "#33271E",
+  },
+  {
+    primary: "#2C2C2C",
+    secondary: "#FAF0E5",
+    tertiary: "#A2C15F",
+    quaternary: "#3B4C33",
+  },
+  {
+    primary: "#1E293B",
+    secondary: "#FAF0E5",
+    tertiary: "#A4D6D8",
+    quaternary: "#115E59",
+  },
+];
+
+export const chosenColorState = atom(colorPalettes[0]);
