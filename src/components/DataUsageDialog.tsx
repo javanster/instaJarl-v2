@@ -53,9 +53,18 @@ export const DataUsageDialog = () => {
           In order to use the current weather feature, you must agree to the use
           of you current location and the possibility that your IP address and
           current location will be sent to{" "}
-          <Link href={"https://www.met.no"}>Meteorologisk Institutt</Link> and
-          stored in their logs. If you do not agree, the weather feature will be
-          disabled.
+          <Link target="_blank" href={"https://www.met.no"}>
+            Meteorologisk Institutt
+          </Link>{" "}
+          and stored in their logs. If you do not agree, the weather feature
+          will be disabled.
+          <Typography sx={{ my: 2 }}>
+            You can find more information about how Meteorologisk Institutt
+            processes and stores data and your rights here:{" "}
+          </Typography>
+          <Link target="_blank" href={"https://www.met.no/om-oss/personvern"}>
+            https://www.met.no/om-oss/personvern
+          </Link>
         </DialogContentText>
       </DialogContent>
       <DialogActions
