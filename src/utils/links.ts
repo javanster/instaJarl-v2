@@ -26,6 +26,11 @@ export const links: LinkObj[] = [
     icon: EmailIcon,
   },
   {
+    title: "Outlook Mail",
+    link: "https://outlook.office.com/mail/",
+    icon: AlternateEmailIcon,
+  },
+  {
     title: "Facebook",
     link: "https://www.facebook.com",
     icon: AccountCircleIcon,
@@ -45,11 +50,7 @@ export const links: LinkObj[] = [
     link: "https://ntnu.blackboard.com/",
     icon: SchoolIcon,
   },
-  {
-    title: "Outlook NTNU",
-    link: "https://outlook.office.com/mail/",
-    icon: AlternateEmailIcon,
-  },
+
   {
     title: "GitHub",
     link: "https://github.com",
