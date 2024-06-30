@@ -85,9 +85,7 @@ export const TopWidget = () => {
             {"/"}
           </Typography>
         )}
-        {position && agreedToWeatherFunctionality && (
-          <WeatherDisplay position={position} />
-        )}
+        {agreedToWeatherFunctionality && <WeatherDisplay position={position} />}
       </Box>
     </Box>
   );

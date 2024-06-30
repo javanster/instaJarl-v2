@@ -5,7 +5,7 @@ import { chosenColorState } from "../utils/state";
 import { useAtomValue } from "jotai";
 
 interface Props {
-  position: Position;
+  position: Position | null;
 }
 
 export const WeatherDisplay = ({ position }: Props) => {
