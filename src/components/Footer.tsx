@@ -1,9 +1,12 @@
 import { Box, Link, Typography } from "@mui/material";
 import { useAtomValue } from "jotai";
 import { chosenColorState } from "../utils/state";
+import { useState } from "react";
+import { DataUsageInfo } from "./DataUsageInfo";
 
 export const Footer = () => {
   const chosenColor = useAtomValue(chosenColorState);
+  const [dataUsageDialogOpen, setDataUsageDialogOpen] = useState(false);
 
   const footerTextStyling = {
     textAlign: "center",
@@ -14,7 +17,10 @@ export const Footer = () => {
   const linkStyling = {
     color: chosenColor.secondary,
     textDecoration: "none",
-    ":hover": { color: chosenColor.tertiary },
+    fontSize: "10px",
+    textAlign: "center",
+    cursor: "pointer",
+    ":hover": { color: chosenColor.tertiary, textDecoration: "underline" },
   };
 
   return (
@@ -49,6 +55,16 @@ export const Footer = () => {
             Yr / Meteorologisk Institutt
           </Link>
         </Typography>
+        <Typography
+          onClick={() => setDataUsageDialogOpen(true)}
+          sx={linkStyling}
+        >
+          How your data is used
+        </Typography>
+        <DataUsageInfo
+          open={dataUsageDialogOpen}
+          setOpen={setDataUsageDialogOpen}
+        />
       </Box>
     </Box>
   );
