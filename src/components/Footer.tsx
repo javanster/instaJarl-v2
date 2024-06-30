@@ -40,7 +40,12 @@ export const Footer = () => {
         </Typography>
         <Typography sx={footerTextStyling}>
           Weather data and icons provided by{" "}
-          <Link sx={linkStyling} href={"https://developer.yr.no"}>
+          <Link
+            sx={linkStyling}
+            href={
+              "https://api.met.no/weatherapi/locationforecast/2.0/documentation"
+            }
+          >
             Yr / Meteorologisk Institutt
           </Link>
         </Typography>
