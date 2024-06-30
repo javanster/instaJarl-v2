@@ -12,12 +12,6 @@ export const colorPalettes = [
     quaternary: "#33271E",
   },
   {
-    primary: "#B6A798",
-    secondary: "#FAF0E5",
-    tertiary: "#5B2617",
-    quaternary: "#33271E",
-  },
-  {
     primary: "#2C2C2C",
     secondary: "#FAF0E5",
     tertiary: "#A2C15F",
