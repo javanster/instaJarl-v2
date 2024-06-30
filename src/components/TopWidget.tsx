@@ -1,12 +1,14 @@
 import { Box, Typography } from "@mui/material";
-import { colors } from "../utils/colors";
+import { chosenColorState } from "../utils/colors";
 import { TimeDisplay } from "./TimeDisplay";
 import { DateDisplay } from "./DateDisplay";
 import { WeatherDisplay } from "./WeatherDisplay";
 import { useState, useEffect } from "react";
 import { Position } from "../api/weather";
+import { useAtomValue } from "jotai";
 
 export const TopWidget = () => {
+  const chosenColor = useAtomValue(chosenColorState);
   const [position, setPosition] = useState<Position | null>(null);
 
   useEffect(() => {
@@ -40,7 +42,7 @@ export const TopWidget = () => {
           sx={{
             mx: 2,
             fontWeight: 1,
-            color: colors.secondary,
+            color: chosenColor.secondary,
             visibility: { xs: position ? "hidden" : "visible", md: "visible" },
             fontSize: {
               xs: 54,
@@ -61,7 +63,7 @@ export const TopWidget = () => {
         <DateDisplay />
         {position && (
           <Typography
-            sx={{ mx: 2, fontWeight: 1, color: colors.secondary }}
+            sx={{ mx: 2, fontWeight: 1, color: chosenColor.secondary }}
             fontSize={{
               xs: 54,
               md: 72,

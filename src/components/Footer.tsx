@@ -1,19 +1,22 @@
 import { Box, Link, Typography } from "@mui/material";
-import { colors } from "../utils/colors";
-
-const footerTextStyling = {
-  textAlign: "center",
-  color: colors.secondary,
-  fontSize: "10px",
-};
-
-const linkStyling = {
-  color: colors.secondary,
-  textDecoration: "none",
-  ":hover": { color: colors.tertiary },
-};
+import { chosenColorState } from "../utils/colors";
+import { useAtomValue } from "jotai";
 
 export const Footer = () => {
+  const chosenColor = useAtomValue(chosenColorState);
+
+  const footerTextStyling = {
+    textAlign: "center",
+    color: chosenColor.secondary,
+    fontSize: "10px",
+  };
+
+  const linkStyling = {
+    color: chosenColor.secondary,
+    textDecoration: "none",
+    ":hover": { color: chosenColor.tertiary },
+  };
+
   return (
     <Box
       sx={{

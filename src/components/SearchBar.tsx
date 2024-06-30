@@ -8,9 +8,11 @@ import {
 import { useState } from "react";
 import { searchBaseUrls } from "../utils/searchUrls";
 import SearchIcon from "@mui/icons-material/Search";
-import { colors } from "../utils/colors";
+import { chosenColorState } from "../utils/colors";
+import { useAtomValue } from "jotai";
 
 export const SearchBar = () => {
+  const chosenColor = useAtomValue(chosenColorState);
   const [searchPhrase, setSearchPhrase] = useState<string>("");
   const [selectedSearchProvider, setSelectedSearchProvider] =
     useState<number>(0);
@@ -57,19 +59,19 @@ export const SearchBar = () => {
             lg: "500px",
           },
           "& .MuiInputBase-input": {
-            color: colors.tertiary,
+            color: chosenColor.tertiary,
           },
           "& .MuiFormLabel-root": {
-            color: colors.tertiary,
+            color: chosenColor.tertiary,
           },
           "& .MuiFormLabel-root.Mui-focused": {
-            color: colors.secondary,
+            color: chosenColor.secondary,
           },
           "& .MuiFilledInput-underline:before": {
-            borderBottomColor: colors.secondary,
+            borderBottomColor: chosenColor.secondary,
           },
           "& .MuiFilledInput-underline:after": {
-            borderBottomColor: colors.tertiary,
+            borderBottomColor: chosenColor.tertiary,
           },
         }}
       />
@@ -78,17 +80,17 @@ export const SearchBar = () => {
         onChange={handleSelectChange}
         sx={{
           "& .MuiInputBase-input": {
-            color: colors.tertiary,
-            backgroundColor: colors.secondary,
+            color: chosenColor.quaternary,
+            backgroundColor: chosenColor.secondary,
             borderRadius: "0px 4px 4px 0px",
           },
           "& .MuiOutlinedInput-notchedOutline": {
             borderRadius: "0px 4px 4px 0px",
-            borderColor: colors.secondary,
+            borderColor: chosenColor.secondary,
           },
           "&.Mui-focused .MuiOutlinedInput-notchedOutline": {
             borderWidth: "0px 0px 2px 0px",
-            borderColor: colors.tertiary,
+            borderColor: chosenColor.tertiary,
           },
         }}
       >

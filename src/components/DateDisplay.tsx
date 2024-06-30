@@ -1,8 +1,10 @@
 import { Typography } from "@mui/material";
 import { useEffect, useState } from "react";
-import { colors } from "../utils/colors";
+import { chosenColorState } from "../utils/colors";
+import { useAtomValue } from "jotai";
 
 export const DateDisplay = () => {
+  const chosenColor = useAtomValue(chosenColorState);
   const [currentDate, setCurrentDate] = useState(
     new Date().toLocaleDateString()
   );
@@ -19,7 +21,7 @@ export const DateDisplay = () => {
     <Typography
       sx={{
         fontWeight: 1,
-        color: colors.tertiary,
+        color: chosenColor.tertiary,
         fontSize: {
           xs: 30,
           md: 42,

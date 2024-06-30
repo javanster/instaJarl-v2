@@ -1,13 +1,15 @@
 import { Box, CircularProgress, Typography } from "@mui/material";
 import { useQuery } from "@tanstack/react-query";
 import { Position, fetchCurrentWeather } from "../api/weather";
-import { colors } from "../utils/colors";
+import { chosenColorState } from "../utils/colors";
+import { useAtomValue } from "jotai";
 
 interface Props {
   position: Position;
 }
 
 export const WeatherDisplay = ({ position }: Props) => {
+  const chosenColor = useAtomValue(chosenColorState);
   const query = useQuery({
     queryKey: ["currentWeather"],
     queryFn: () => fetchCurrentWeather(position),
@@ -30,7 +32,7 @@ export const WeatherDisplay = ({ position }: Props) => {
         >
           <img width={50} src={`/weatherSvg/${weatherSymbolCode}.svg`} />
           <Typography
-            sx={{ fontWeight: 1, color: colors.tertiary, ml: 1 }}
+            sx={{ fontWeight: 1, color: chosenColor.tertiary, ml: 1 }}
             fontSize={{
               xs: 20,
               md: 28,
@@ -43,7 +45,7 @@ export const WeatherDisplay = ({ position }: Props) => {
         <CircularProgress
           sx={{
             "& .MuiCircularProgress-circle": {
-              color: colors.tertiary,
+              color: chosenColor.tertiary,
             },
           }}
         />
