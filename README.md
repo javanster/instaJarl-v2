@@ -1,6 +1,6 @@
 # InstaJarl
 
-InstaJarl is a personal web application containing bookmarks and minor utilities, such as the current temperature and weather at the user's location, the time and date, and a searchbar. Its functionality and name is partly inspired by [InstaBart](https://instabart.no), made by [Morten Vaale Noddeland](https://mvn.no).
+InstaJarl is a personal web application containing bookmarks and minor utilities, such as the current temperature and weather at the user's location, the time and date, and a searchbar. It's functionality and name is partly inspired by [InstaBart](https://instabart.no), made by [Morten Vaale Noddeland](https://mvn.no).
 
 ![A screenshot of the web application](/public/exampleImage.png)
 
