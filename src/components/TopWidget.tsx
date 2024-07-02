@@ -1,28 +1,11 @@
 import { Box, Typography } from "@mui/material";
-import {
-  agreedToWeatherFunctionalityState,
-  chosenColorState,
-} from "../utils/state";
+import { chosenColorState } from "../utils/state";
 import { TimeDisplay } from "./TimeDisplay";
 import { DateDisplay } from "./DateDisplay";
-import { WeatherDisplay } from "./WeatherDisplay";
-import { useState, useEffect } from "react";
-import { Position } from "../api/weather";
 import { useAtomValue } from "jotai";
 
 export const TopWidget = () => {
   const chosenColor = useAtomValue(chosenColorState);
-  const [position, setPosition] = useState<Position | null>(null);
-  const agreedToWeatherFunctionality = useAtomValue(
-    agreedToWeatherFunctionalityState
-  );
-
-  useEffect(() => {
-    navigator.geolocation.getCurrentPosition((position) => {
-      const { latitude, longitude } = position.coords;
-      setPosition({ lat: latitude, lng: longitude });
-    });
-  }, []);
 
   return (
     <Box
@@ -30,7 +13,7 @@ export const TopWidget = () => {
         display: "flex",
         justifyContent: "center",
         flexDirection: {
-          xs: position && agreedToWeatherFunctionality ? "column" : "row",
+          xs: "row",
           md: "row",
         },
         mt: {
@@ -53,8 +36,7 @@ export const TopWidget = () => {
             fontWeight: 1,
             color: chosenColor.secondary,
             visibility: {
-              xs:
-                position && agreedToWeatherFunctionality ? "hidden" : "visible",
+              xs: "visible",
               md: "visible",
             },
             fontSize: {
@@ -74,18 +56,6 @@ export const TopWidget = () => {
         }}
       >
         <DateDisplay />
-        {position && agreedToWeatherFunctionality && (
-          <Typography
-            sx={{ mx: 2, fontWeight: 1, color: chosenColor.secondary }}
-            fontSize={{
-              xs: 54,
-              md: 72,
-            }}
-          >
-            {"/"}
-          </Typography>
-        )}
-        {agreedToWeatherFunctionality && <WeatherDisplay position={position} />}
       </Box>
     </Box>
   );
