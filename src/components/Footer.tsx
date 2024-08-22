@@ -1,12 +1,9 @@
 import { Box, Link, Typography } from "@mui/material";
 import { useAtomValue } from "jotai";
 import { chosenColorState } from "../utils/state";
-import { useState } from "react";
-import { DataUsageInfo } from "./DataUsageInfo";
 
 export const Footer = () => {
   const chosenColor = useAtomValue(chosenColorState);
-  const [dataUsageDialogOpen, setDataUsageDialogOpen] = useState(false);
 
   const footerTextStyling = {
     textAlign: "center",
@@ -44,27 +41,6 @@ export const Footer = () => {
             Material UI
           </Link>
         </Typography>
-        <Typography sx={footerTextStyling}>
-          Weather data and icons provided by{" "}
-          <Link
-            sx={linkStyling}
-            href={
-              "https://api.met.no/weatherapi/locationforecast/2.0/documentation"
-            }
-          >
-            Yr / Meteorologisk Institutt
-          </Link>
-        </Typography>
-        <Typography
-          onClick={() => setDataUsageDialogOpen(true)}
-          sx={linkStyling}
-        >
-          How your data is used
-        </Typography>
-        <DataUsageInfo
-          open={dataUsageDialogOpen}
-          setOpen={setDataUsageDialogOpen}
-        />
       </Box>
     </Box>
   );

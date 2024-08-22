@@ -5,30 +5,13 @@ import { SearchBar } from "./components/SearchBar";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { TopWidget } from "./components/TopWidget";
 import { Footer } from "./components/Footer";
-import { useAtom, useSetAtom } from "jotai";
+import { useAtom } from "jotai";
 import { useEffect } from "react";
-import { DataUsageDialog } from "./components/DataUsageDialog";
-import {
-  agreedToWeatherFunctionalityState,
-  chosenColorState,
-} from "./utils/state";
+import { chosenColorState } from "./utils/state";
 
 function App() {
   const queryClient = new QueryClient();
   const [chosenColor, setChosenColor] = useAtom(chosenColorState);
-  const setAgreedToWeatherFunctionality = useSetAtom(
-    agreedToWeatherFunctionalityState
-  );
-  const agreedToWeatherFunctionality = localStorage.getItem(
-    "instaJarlAgreedToWeatherService"
-  );
-
-  useEffect(() => {
-    agreedToWeatherFunctionality &&
-      setAgreedToWeatherFunctionality(
-        agreedToWeatherFunctionality === "true" ? true : false
-      );
-  }, [agreedToWeatherFunctionality, setAgreedToWeatherFunctionality]);
 
   useEffect(() => {
     const randomIndex = Math.floor(Math.random() * colorPalettes.length);
@@ -45,7 +28,6 @@ function App() {
       }}
     >
       <QueryClientProvider client={queryClient}>
-        {agreedToWeatherFunctionality === null && <DataUsageDialog />}
         <TopWidget />
         <SearchBar />
         <LinkGrid />

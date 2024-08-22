@@ -2,7 +2,7 @@ import AccountCircleIcon from "@mui/icons-material/AccountCircle";
 import AirIcon from "@mui/icons-material/Air";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import BallotIcon from "@mui/icons-material/Ballot";
-import BiotechIcon from "@mui/icons-material/Biotech";
+import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import ChatIcon from "@mui/icons-material/Chat";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
@@ -67,9 +67,9 @@ export const links: LinkObj[] = [
     icon: NewspaperIcon,
   },
   {
-    title: "ResearchGate",
-    link: "https://www.researchgate.net",
-    icon: BiotechIcon,
+    title: "Waking Up",
+    link: "https://app.wakingup.com",
+    icon: BrightnessMediumIcon,
   },
 
   {

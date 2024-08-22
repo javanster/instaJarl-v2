@@ -28,7 +28,7 @@ export const TimeDisplay = () => {
       sx={{
         fontWeight: "bold",
         color: chosenColor.tertiary,
-        fontSize: 48,
+        fontSize: { xs: 36, md: 48 },
       }}
     >
       {currentTime}
