@@ -4,7 +4,7 @@ import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import BallotIcon from "@mui/icons-material/Ballot";
 import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
 import EmailIcon from "@mui/icons-material/Email";
-import FeedIcon from "@mui/icons-material/Chat";
+import FeedIcon from "@mui/icons-material/Feed";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
