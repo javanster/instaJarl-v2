@@ -3,8 +3,8 @@ import AirIcon from "@mui/icons-material/Air";
 import AlternateEmailIcon from "@mui/icons-material/AlternateEmail";
 import BallotIcon from "@mui/icons-material/Ballot";
 import BrightnessMediumIcon from "@mui/icons-material/BrightnessMedium";
-import ChatIcon from "@mui/icons-material/Chat";
 import EmailIcon from "@mui/icons-material/Email";
+import FeedIcon from '@mui/icons-material/Feed';
 import GitHubIcon from "@mui/icons-material/GitHub";
 import GTranslateIcon from "@mui/icons-material/GTranslate";
 import NewspaperIcon from "@mui/icons-material/Newspaper";
@@ -57,9 +57,9 @@ export const links: LinkObj[] = [
     icon: GitHubIcon,
   },
   {
-    title: "ChatGPT",
-    link: "https://chat.openai.com",
-    icon: ChatIcon,
+    title: "Adressa",
+    link: "https://www.adressa.no",
+    icon: FeedIcon,
   },
   {
     title: "NRK",
