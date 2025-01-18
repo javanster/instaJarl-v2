@@ -1,5 +1,9 @@
 export const searchBaseUrls = [
   {
+    title: "Kagi",
+    baseUrl: "https://kagi.com/search?q=",
+  },
+  {
     title: "Ecosia",
     baseUrl: "https://www.ecosia.org/search?method=index&q=",
   },
