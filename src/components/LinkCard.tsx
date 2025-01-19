@@ -17,6 +17,7 @@ export const LinkCard = ({ title, link, icon: Icon }: LinkObj) => {
     >
       <Box
         component={Link}
+        target="blank"
         href={link}
         sx={{
           height: "72px",
