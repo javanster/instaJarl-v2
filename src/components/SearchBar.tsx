@@ -17,14 +17,14 @@ export const SearchBar = () => {
   const [selectedSearchProvider, setSelectedSearchProvider] =
     useState<number>(0);
 
-  const handleSearch = (searchPhrase: string) => {
-    if (searchPhrase.length === 0) {
-      return;
-    }
-    const searchProviderBaseUrl =
-      searchBaseUrls[selectedSearchProvider].baseUrl;
-    window.location.href = searchProviderBaseUrl + searchPhrase;
-  };
+    const handleSearch = (searchPhrase: string) => {
+      if (searchPhrase.trim().length === 0) {
+        return;
+      }
+      const searchProviderBaseUrl = searchBaseUrls[selectedSearchProvider].baseUrl;
+      window.open(searchProviderBaseUrl + searchPhrase, '_blank');
+      setSearchPhrase("");
+    };
 
   const handleInputKeyDown = (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === "Enter") {
